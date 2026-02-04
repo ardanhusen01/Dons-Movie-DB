@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    min-height: 100vh;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+h1 {
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    animation: slideDown 0.5s ease-out;
+    font-size: 42px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-group {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+    animation: fadeIn 0.6s ease-out;
+    align-items: center;
+}
+
+.input-keyword {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.input-keyword:focus {
+    background-color: #ffffff;
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2), 0 8px 25px rgba(0, 212, 255, 0.3);
+    outline: none;
+}
+
+.input-keyword:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+}
+
+.input-keyword::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.input-group-append {
+    display: flex;
+}
+
+.input-group-append .btn {
+    border: none;
+    padding: 14px 35px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.input-group-append .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+    background: linear-gradient(135deg, #0099ff 0%, #00d4ff 100%);
+}
+
+.input-group-append .btn:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.movie-container {
+    margin-top: 40px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background: #fff;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.25);
+}
+
+.card-img-top {
+    height: clamp(250px, 35vh, 400px);
+    object-fit: contain;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #0f2027;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.card-subtitle {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0099ff 0%, #00d4ff 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+    color: white;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+    color: white;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+    border: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.modal-header .modal-title {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.modal-header .close {
+    color: white;
+    opacity: 0.8;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+    background: transparent;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item h4 {
+    color: #0f2027;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.list-group-item strong {
+    color: #00d4ff;
+    font-weight: 700;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-footer {
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-keyword {
+        flex: 1;
+        width: 100%;
+    }
+
+    .input-group-append {
+        width: 100%;
+    }
+
+    .input-group-append .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
