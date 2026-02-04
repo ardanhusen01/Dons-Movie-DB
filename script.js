@@ -8,7 +8,7 @@ function searchMovies() {
     }
 
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=d9008b3d&s=' + keyword,
+        url: 'https://www.omdbapi.com/?apikey=d9008b3d&s=' + keyword,
         success: result => {
             if (result.Response === 'False') {
                 $('.movie-container').html('<div class="alert alert-warning" role="alert">Film tidak ditemukan!</div>');
@@ -25,7 +25,7 @@ function searchMovies() {
             // Ketika tombol detail di klik
             $('.modal-detail-button').on('click', function () {
                 $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=d9008b3d&i=' + $(this).data('imdbid'),
+                    url: 'https://www.omdbapi.com/?apikey=d9008b3d&i=' + $(this).data('imdbid'),
                     success: m => {
                         const movieDetail = showMovieDetail(m);
                         $('.modal-body').html(movieDetail);
